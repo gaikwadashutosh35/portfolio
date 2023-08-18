@@ -1,38 +1,388 @@
-.App {
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #4c4646;
+  color: #fff;
+}
+
+/* Header Section */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+ul.contact-info {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+ul.contact-info li {
+  margin: 0 1rem;
+}
+
+ul.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  overflow: hidden; /* Hide overflow to prevent scrollbar */
+  position: relative; /* Needed for absolute positioning of sections */
+}
+
+/* Hero Section */
+/* Add these styles at the end of your existing CSS */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 50%;
+  color: #fff;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content a {
+  display: inline-block;
+  background-color: #fff;
+  color: #007bff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.languages-graph {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info li a {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-info li a:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-info li a:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Transition between sections */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About, Experience, and Projects sections styles */
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: #4c4646;
+}
+
+.about-section,
+.experience-section {
+  padding: 4rem 2rem;
+  background-color: #333;
+}
+
+.about-section, .skills-section {
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Add these styles at the end of your existing CSS */
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem; 
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.App-link {
+.skill i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+/* Skill-specific text colors */
+.skills-container .java p {
+  color: #ff5733;
+}
+
+.skills-container .python p {
+  color: #3776ab;
+}
+
+.skills-container .cpp p {
+  color: #5a5a5a;
+}
+
+.skills-container .sap p {
+  color: #0faaff;
+}
+
+.skills-container .html p {
+  color: #e44d26;
+}
+
+.skills-container .css p {
+  color: #2965f1;
+}
+
+.skills-container .javascript p {
+  color: #f7df1e;
+}
+
+.skills-container .react p {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.skills-container .angular p {
+  color: #dd0031;
+}
+
+.skills-container .sql p {
+  color: #f29111;
+}
+
+.skills-container .mongodb p {
+  color: #47a248;
+}
+
+.skills-container .azure p {
+  color: #0089d6;
+}
+
+.skills-container .restapi p {
+  color: #00cc7a;
+}
+
+.skills-container .salesforce p {
+  color: #1798c1;
+}
+
+/* Add these styles at the end of your existing CSS */
+.experience-item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.experience-year {
+  flex: 0 0 150px;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.experience-details {
+  flex: 1;
+  border-left: 3px solid #007bff;
+  padding-left: 1rem;
+}
+
+.experience-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experience-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Add these styles at the end of your existing CSS */
+.project-box {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(198, 188, 188, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+}
+
+.project-icon {
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.project-icon i {
+  font-size: 2rem;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Add these styles at the end of your existing CSS */
+.languages-graph {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.languages-graph img {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.languages-graph img:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Social Media Icons */
+footer .fa {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+footer .fa:hover {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
 }
