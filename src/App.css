@@ -148,7 +148,8 @@ section.show {
   background-color: #333;
 }
 
-.about-section, .skills-section {
+.about-section,
+.skills-section {
   padding: 4rem 2rem;
 }
 
@@ -171,7 +172,7 @@ section.show {
 /* Add these styles at the end of your existing CSS */
 .skills-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
 .skills-container {
@@ -384,5 +385,41 @@ footer .fa:hover {
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
+  }
+  .projects-content {
+    padding: 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .project-box {
+    flex-direction: column; /* Stack project info below the icon */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .project-icon {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+    text-align: left; /* Align text to the left */
+  }
+  ul.contact-info {
+    justify-content: center; /* Center align for smaller screens */
+  }
+
+  ul.contact-info li {
+    margin: 0 0.5rem; /* Reduce spacing between icons */
+  }
+
+  ul.contact-info a {
+    font-size: 1.8rem; /* Increase the icon size */
+  }
+
+  ul.contact-info a:before {
+    bottom: -35px; /* Adjust tooltip position */
+    font-size: 1rem; /* Adjust tooltip font size */
+    padding: 4px 8px; /* Adjust tooltip padding */
   }
 }

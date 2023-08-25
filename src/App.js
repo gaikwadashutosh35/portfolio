@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 // src/App.js
 import React, { useEffect } from "react";
 import "./App.css";
@@ -110,7 +111,7 @@ function App() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
             </div>
             <div className="skill sap">
-              <img src="file:///C:/Users/HP/AppData/Local/Temp/Temp4c1e21d8-026e-4d3e-a051-98862cfa4065_icons8-sap-color.zip/icons8-sap-96.svg" />
+              <img src="" />
               <p>SAP</p>
             </div>
             <div className="skill html">
