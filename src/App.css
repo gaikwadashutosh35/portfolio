@@ -409,8 +409,8 @@ footer .fa:hover {
     margin: 0 0.5rem;
   }
 
-  ul.contact-info a {
-    font-size: 3rem;
+  ul.contact-info a i{
+    font-size: 5rem;
   }
 
   ul.contact-info a:before {
