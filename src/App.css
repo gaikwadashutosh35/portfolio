@@ -45,12 +45,10 @@ ul.contact-info a {
 
 /* Main Content */
 main {
-  overflow: hidden; /* Hide overflow to prevent scrollbar */
-  position: relative; /* Needed for absolute positioning of sections */
+  overflow: hidden; 
+  position: relative; 
 }
 
-/* Hero Section */
-/* Add these styles at the end of your existing CSS */
 .hero-section {
   display: flex;
   align-items: center;
@@ -169,7 +167,6 @@ section.show {
   line-height: 1.6;
 }
 
-/* Add these styles at the end of your existing CSS */
 .skills-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -301,7 +298,6 @@ section.show {
   margin-bottom: 2rem;
 }
 
-/* Add these styles at the end of your existing CSS */
 .project-box {
   display: flex;
   margin-bottom: 2rem;
@@ -342,8 +338,6 @@ section.show {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-
-/* Add these styles at the end of your existing CSS */
 .languages-graph {
   display: flex;
   justify-content: center;
@@ -361,7 +355,6 @@ section.show {
   transform: translateY(-5px);
 }
 
-/* Footer Section */
 footer {
   background-color: #333;
   color: #fff;
@@ -369,7 +362,6 @@ footer {
   padding: 1rem;
 }
 
-/* Social Media Icons */
 footer .fa {
   color: #fff;
   margin: 0 0.5rem;
@@ -387,39 +379,39 @@ footer .fa:hover {
     font-size: 2rem;
   }
   .projects-content {
-    padding: 2rem; /* Reduce padding for smaller screens */
+    padding: 2rem; 
   }
 
   .project-box {
-    flex-direction: column; /* Stack project info below the icon */
-    align-items: flex-start; /* Align content to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .project-icon {
-    width: 100%; /* Full width */
+    width: 100%; 
     display: flex;
     justify-content: center;
   }
 
   .project-info {
     padding: 1.5rem;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
   }
   ul.contact-info {
-    justify-content: center; /* Center align for smaller screens */
+    justify-content: center; 
   }
 
   ul.contact-info li {
-    margin: 0 0.5rem; /* Reduce spacing between icons */
+    margin: 0 0.5rem; 
   }
 
   ul.contact-info a {
-    font-size: 1.8rem; /* Increase the icon size */
+    font-size: 1.8rem; 
   }
 
   ul.contact-info a:before {
-    bottom: -35px; /* Adjust tooltip position */
-    font-size: 1rem; /* Adjust tooltip font size */
-    padding: 4px 8px; /* Adjust tooltip padding */
+    bottom: -35px; 
+    font-size: 1rem; 
+    padding: 4px 8px; 
   }
 }
