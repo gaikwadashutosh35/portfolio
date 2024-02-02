@@ -61,7 +61,7 @@ function App() {
           </li>
           <li>
             <a
-              href="https://drive.google.com/file/d/1S5bIJDUcH_pnr910VsGPx4DJaw_0P9Ay/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Uz1BLN4wNEjKzz2MSwSHYWhDcCSBFHUC/view?usp=sharing"
               download
               // title="Download Resume"
               data-tooltip="Resume"
