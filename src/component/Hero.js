@@ -5,7 +5,7 @@ function Hero() {
     <section className="hero-section">
       <div className="hero-content">
         <h2>Experienced Software Engineer</h2>
-        <p>Skilled in Java, Python, Web Development</p>
+        <p>Skilled in Java, Web Development</p>
         <a href="#about">Learn More</a>
       </div>
       <div className="languages-graph">

@@ -4,9 +4,15 @@ import ResumeModal from "./ResumeModal";
 
 function Header() {
   const [showPreview, setShowPreview] = useState(false);
+  const [showResumeTooltip, setShowResumeTooltip] = useState(false);
 
-  const togglePreview = () => {
+  const togglePreview = (event) => {
+    event.preventDefault();
     setShowPreview(!showPreview);
+  };
+
+  const handleResumeTooltip = (status) => {
+    setShowResumeTooltip(status);
   };
 
   return (
@@ -38,10 +44,23 @@ function Header() {
             <i className="fab fa-github"></i>
           </a>
         </li>
-        <li>
+        {/* <li>
           <button onClick={togglePreview} data-tooltip="Resume">
             <i className="fas fa-file-download"></i>
           </button>
+        </li> */}
+        <li>
+          <a
+            href="#"
+            onClick={togglePreview}
+            onMouseEnter={() => handleResumeTooltip(true)}
+            onMouseLeave={() => handleResumeTooltip(false)}
+          >
+            <div className="tooltip-wrapper">
+              <i className="fas fa-file-download"></i>
+              {showResumeTooltip && <span className="tooltip">Resume</span>}
+            </div>
+          </a>
         </li>
       </ul>
       {showPreview && (
