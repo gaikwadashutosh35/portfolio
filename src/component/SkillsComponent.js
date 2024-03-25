@@ -61,10 +61,9 @@ function SkillsComponent() {
         </div>
         <div className="skill graphQL">
           <img
-            src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
             alt="GraphQL"
           />
-          <p>GraphQL</p>
         </div>
         <div className="skill sql">
           <img
